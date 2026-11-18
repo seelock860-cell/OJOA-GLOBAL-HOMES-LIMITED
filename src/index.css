@@ -1,0 +1,71 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Cormorant Garamond", Georgia, serif;
+  --font-sans: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+
+  --color-navy-950: #061024;
+  --color-navy-900: #0B1C3D;
+  --color-navy-800: #132B57;
+  --color-navy-700: #1C3D7A;
+  --color-gold-600: #A37E2C;
+  --color-gold-500: #C6A254;
+  --color-gold-400: #D9BA74;
+  --color-gold-100: #F7F1E1;
+  --color-surface-50: #F7F8FA;
+  --color-surface-100: #EFF2F6;
+}
+
+@layer base {
+  html {
+    font-family: var(--font-sans);
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+  }
+
+  body {
+    overflow-x: hidden;
+    background-color: #ffffff;
+    color: #0f172a;
+  }
+
+  h1, h2, .font-display {
+    font-family: var(--font-display);
+  }
+}
+
+@keyframes whatsapp-pump {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.06);
+  }
+}
+
+@keyframes whatsapp-ring {
+  0% {
+    transform: scale(1);
+    opacity: 0.45;
+  }
+  100% {
+    transform: scale(1.42);
+    opacity: 0;
+  }
+}
+
+.animate-whatsapp-pump {
+  animation: whatsapp-pump 1.8s cubic-bezier(0.16, 1, 0.3, 1) infinite;
+}
+
+.animate-whatsapp-ring {
+  animation: whatsapp-ring 1.8s cubic-bezier(0.16, 1, 0.3, 1) infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-whatsapp-pump,
+  .animate-whatsapp-ring {
+    animation: none;
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "name": "Ojoa Global Homes Limited",
+  "description": "Abuja's trusted real estate developer for premium estates and properties.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
